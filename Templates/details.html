@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>
+    Details Page
+</h1>
+{% endblock header%}
+
+{% block main %}
+
+<h3>
+    Title: {{modelblog.title}}
+</h3>
+
+<p>
+    Body: {{modelblog.body}}
+</p>
+
+<button><a href="{% url 'update_blog' modelblog.pk %}">Update</a></button>
+<button><a href="{% url 'delete_blog' modelblog.pk %}">Delete</a></button>
+
+{% endblock main %}

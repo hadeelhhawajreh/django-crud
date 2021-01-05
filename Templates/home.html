@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>
+    Home Page
+</h1>
+{% endblock header%}
+
+{% block main %}
+<ul>
+    {% for blog in object_list %}
+    <li><a href="{% url 'details' blog.pk %}">{{blog.title}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock main %}
