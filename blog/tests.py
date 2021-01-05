@@ -14,7 +14,7 @@ class CRUDTests(TestCase):
             email = 'hadeel@gmail.com',
             password = '123456'
         )
-        self.snack = ModelBlog.objects.create(
+        self.ModelBlog = ModelBlog.objects.create(
             title = 'Book',
             author = self.user,
             body= 'body ',
